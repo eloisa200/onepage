@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Ingressos - Shows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Venda de Ingressos para Shows</h1>
+
+        <!-- seleção de setores -->
+        <section class="sectors">
+            <h2>Bruno Mars</h2>
+            <table class="sectors-table">
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Preço Inteira |</th>
+                        <th>Preço Meia</th>
+                        <th>Quantidade</th>
+                        <th>Entrada |</th>
+                        <th>Adicionar ao Carrinho</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-sector="camarote">
+                        <td>Camarote -</td>
+                        <td class="full-price" data-price="3.000">R$ 3.000,00</td>
+                        <td class="half-price" data-price="620">R$ 2.400,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                    <tr data-sector="pista-premium">
+                        <td>Pista Premium -</td>
+                        <td class="full-price" data-price="1250">R$ 1250,00</td>
+                        <td class="half-price" data-price="620">R$ 620,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                    <tr data-sector="pista">
+                        <td>Pista -</td>
+                        <td class="full-price" data-price="650">R$ 650,00</td>
+                        <td class="half-price" data-price="325">R$ 325,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                    <tr data-sector="cadeira-inferior">
+                        <td>Cadeira Inferior -</td>
+                        <td class="full-price" data-price="780">R$ 780,00</td>
+                        <td class="half-price" data-price="390">R$ 390,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                    <tr data-sector="cadeira-superior">
+                        <td>Cadeira Superior -</td>
+                        <td class="full-price" data-price="860">R$ 860,00</td>
+                        <td class="half-price" data-price="430">R$ 430,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                    <tr data-sector="arquibancada">
+                        <td>Arquibancada -</td>
+                        <td class="full-price" data-price="470">R$ 470,00</td>
+                        <td class="half-price" data-price="235">R$ 235,00</td>
+                        <td><input type="number" class="sector-quantity" min="0" value="0"></td>
+                        <td>
+                            <select class="sector-type">
+                                <option value="inteira">Inteira</option>
+                                <option value="meia">Meia</option>
+                            </select>
+                        </td>
+                        <td><button class="add-to-cart-btn">Adicionar 🛒</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Carrinho -->
+        <section class="cart">
+            <h2>Carrinho de compras</h2>
+            <table class="cart-table">
+            
+                <tbody id="cart-body">
+                    <!-- itens do carrinho -->
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <p><strong>Total:</strong> <span id="total-price">R$ 0,00</span></p>
+                <button class="checkout-btn">Finalizar Compra 🛍️</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
